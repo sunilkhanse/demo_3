@@ -6,6 +6,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class Student {
 
+    public Student() {}
+
+    public Student(String id, String name, String address) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+    }
+
     @Id
     private String id;
     private String name;

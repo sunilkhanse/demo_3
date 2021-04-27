@@ -3,6 +3,10 @@ package com.cas.filemonitor.student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 @Service
 public class StudentService {
 
@@ -18,5 +22,14 @@ public class StudentService {
             throw new NullPointerException("Repository is null");
         }
         return student;
+    }
+
+    public List<Student> getStudents() {
+        return Stream.of(
+                new Student("1", "Sunil", "Dinnapur"),
+                new Student("2", "Anil", "Dinnapur"),
+                new Student("3", "Nandu", "Dinnapur"),
+                new Student("3", "Bandu", "Dinnapur")
+        ).collect(Collectors.toList());
     }
 }
