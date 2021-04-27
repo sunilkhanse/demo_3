@@ -4,7 +4,7 @@ phases:
     commands:
       - echo entered the build phase
       - mvn clean package
-  post-build:
+  post_build:
     commands:
       - echo build completed successfully
 artifacts:
