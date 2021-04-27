@@ -1,6 +1,7 @@
 package com.cas.filemonitor;
 
 import com.cas.filemonitor.student.Student;
+import com.cas.filemonitor.student.StudentController;
 import com.cas.filemonitor.student.StudentService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -8,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.Assert;
 
-@SpringBootTest(classes = Stude)
+@SpringBootTest(classes = StudentController.class)
 class FileMonitoringSystemApplicationTests {
 
     @Autowired
